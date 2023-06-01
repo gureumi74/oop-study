@@ -8,7 +8,7 @@ class OpGameTest {
 
     @Test
     public void test() {
-        OpGame game = new OpGame();
+        OpGame game = new OpGame(new PlusOperatorLevelOne());
         game.makeQuestion();
         String question = game.getQuestion();
 
@@ -29,8 +29,10 @@ class OpGameTest {
     // 둘을 더했을 때 10 미만인지 확인
     @Test
     public void testSumMax() {
-        int a = 0;
-        int b = 0;
-        assertTrue(a + b < 10);
+        int max = 10;
+        int a = (int)(Math.random() * max);
+        int b = (int)(Math.random() * (max - a));
+        System.out.printf("%d + %d = %d", a, b, a + b);
+        assertTrue(a + b < max);
     }
 }
