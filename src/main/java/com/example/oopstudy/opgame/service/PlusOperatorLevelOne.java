@@ -1,7 +1,6 @@
 package com.example.oopstudy.opgame.service;
 
-public class PlusOperatorLevelOne {
-    public class PlusOpertorLevelOne implements IOperator {
+public class PlusOperatorLevelOne implements IOperator {
         int a, b;
         @Override
         public void setA(int a) {
@@ -28,5 +27,4 @@ public class PlusOperatorLevelOne {
         public boolean isEqueals(int answer) {
             return (a + b) == answer;
         }
-    }
 }
