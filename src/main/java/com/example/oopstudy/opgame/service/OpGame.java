@@ -18,8 +18,6 @@ public class OpGame {
     }
 
     public void makeQuestion(int max) {
-//        a = (int)(Math.random() * max);
-//        b = (int)(Math.random() * (max - a));
         op.generateQuestion(max);
     }
 
@@ -36,7 +34,6 @@ public class OpGame {
     // 정답인지 확인
     public boolean isAnswer(int answer) {
         remainingAnswer--;
-//        return (a + b) == answer;
         return op.isEqueals(answer);
     }
 

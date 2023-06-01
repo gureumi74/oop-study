@@ -2,30 +2,31 @@ package com.example.oopstudy.opgame.service;
 
 public class PlusOperatorLevelOne {
     public class PlusOpertorLevelOne implements IOperator {
-
+        int a, b;
         @Override
         public void setA(int a) {
-
+            this.a = a;
         }
 
         @Override
         public void setB(int b) {
-
+            this.b = b;
         }
 
         @Override
         public void generateQuestion(int max) {
-
+            a = (int)(Math.random() * max);
+            b = (int)(Math.random() * (max - a));
         }
 
         @Override
         public String getQuestionMsg() {
-            return null;
+            return String.format("%d + %d = ", a, b);
         }
 
         @Override
         public boolean isEqueals(int answer) {
-            return false;
+            return (a + b) == answer;
         }
     }
 }
