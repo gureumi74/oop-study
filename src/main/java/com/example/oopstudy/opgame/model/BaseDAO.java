@@ -17,8 +17,8 @@ public class BaseDAO {
     protected void getConn() {
         // 호스트 정보를 변수로 설정
 
-        Map<String, String> env = getenv();
-        String dbHost = env.get("DB_HOST");
+//        Map<String, String> env = getenv();
+//        String dbHost = env.get("DB_HOST");
         String url = "jdbc:sqlite:world.db";
         String user = "";
         String pw = "";
