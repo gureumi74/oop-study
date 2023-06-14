@@ -19,7 +19,7 @@ public class BaseDAO {
 
         Map<String, String> env = getenv();
         String dbHost = env.get("DB_HOST");
-        String url = dbHost;
+        String url = "jdbc:sqlite:world.db";
         String user = "";
         String pw = "";
 
